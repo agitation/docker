@@ -1,0 +1,9 @@
+set mouse-=a
+
+syntax on
+
+set background=dark
+
+if has("autocmd")
+  filetype plugin indent on
+endif
