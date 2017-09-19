@@ -1,5 +1,7 @@
 FROM agitation/base:latest
 
+ARG SYMFONY_ENV
+ENV SYMFONY_ENV ${SYMFONY_ENV:-dev}
 ENV DEBIAN_FRONTEND noninteractive
 
 ADD https://packages.sury.org/php/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
