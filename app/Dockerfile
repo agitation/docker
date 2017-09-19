@@ -14,7 +14,10 @@ RUN chmod 744 /etc/apt/trusted.gpg.d/php.gpg && \
 RUN mkdir /run/php && \
     rm -r /etc/php/* /etc/nginx/*
 
+
 COPY dist/ /
+
+RUN sed -i -e "s|SYMFONY_ENV|$SYMFONY_ENV|g" /etc/nginx/nginx.conf
 
 # We don’t expose 443, because we don’t want to handle SSL certificates and private keys within the container.
 # Use a load balancer or reverse proxy for SSL termination.
