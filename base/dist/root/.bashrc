@@ -21,7 +21,6 @@ PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 
 export SHELL="/bin/bash"
 export EDITOR="/usr/bin/vim"
-export SYMFONY_ENV="prod"
 
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors)"
